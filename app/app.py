@@ -390,8 +390,8 @@ async def all_anomalies():
 
 
     except Exception as e:
-
-        raise HTTPException(
-            status_code=500,
-            detail=str(e)
-        )
+     print("QUERY ERROR:", repr(e))
+    raise HTTPException(
+        status_code=500,
+        detail=str(e)
+    )
