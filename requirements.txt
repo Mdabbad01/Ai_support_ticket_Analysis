@@ -1,0 +1,7 @@
+ffastapi
+uvicorn[standard]
+pandas
+python-dotenv
+jinja2
+pydantic
+google-genai

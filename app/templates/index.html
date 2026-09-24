@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Support Ticket Analyzer</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header class="header">
+
+            <h1>AI Support Ticket Analyzer</h1>
+
+            <p>
+                Ask questions about your customer support tickets
+                using natural language.
+            </p>
+
+        </header>
+
+
+        <main>
+
+            <section class="query-section">
+
+                <label for="question">
+                    Ask a question
+                </label>
+
+                <div class="input-area">
+
+                    <textarea
+                        id="question"
+                        placeholder="Example: How many tickets are currently open?"
+                        rows="4"
+                    ></textarea>
+
+                    <button id="askButton">
+                        Ask AI
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <section id="loading" class="loading hidden">
+
+                <div class="spinner"></div>
+
+                <p>
+                    Analyzing your question...
+                </p>
+
+            </section>
+
+
+            <section id="error" class="error hidden">
+
+                <h3>Error</h3>
+
+                <p id="errorMessage"></p>
+
+            </section>
+
+
+            <section id="resultSection" class="result-section hidden">
+
+                <h2>Result</h2>
+
+                <div class="result-card">
+
+                    <div class="question-result">
+
+                        <strong>Question</strong>
+
+                        <p id="questionResult"></p>
+
+                    </div>
+
+
+                    <div class="answer-result">
+
+                        <strong>Answer</strong>
+
+                        <p id="answerResult"></p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="query-plan">
+
+                    <h3>Query Plan</h3>
+
+                    <pre id="queryPlan"></pre>
+
+                </div>
+
+            </section>
+
+
+            <section class="examples">
+
+                <h2>Example Questions</h2>
+
+                <div class="example-grid">
+
+                    <button class="example-question">
+                        How many tickets are currently open?
+                    </button>
+
+                    <button class="example-question">
+                        How many critical tickets are unresolved?
+                    </button>
+
+                    <button class="example-question">
+                        What is the average customer rating?
+                    </button>
+
+                    <button class="example-question">
+                        How many tickets are in each category?
+                    </button>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <footer>
+
+            <p>
+                AI Support Ticket Analyzer
+            </p>
+
+        </footer>
+
+    </div>
+
+
+    <script src="/static/script.js"></script>
+
+</body>
+
+</html>
